@@ -1,12 +1,12 @@
 const React = require("react")
 const Nav = require("../components/Nav")
+const DefaultLayout = require("../layout/Default")
 
 class New extends React.Component {
   render() {
     return(
-      <div>
+      <DefaultLayout title="Create a New Fruit!">
         <Nav link="/fruits" text="Home" />
-        <h1>Create a New Fruit!</h1>
         <form action="/fruits" method="POST">
           Name: <input type="text" name="name" />
           Color: <input type="text" name="color" />
@@ -17,7 +17,7 @@ class New extends React.Component {
           /> 
           <input type="submit" value="Create Fruit" />       
         </form>
-      </div>
+      </DefaultLayout>
     )
   }
 }
